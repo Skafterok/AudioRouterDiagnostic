@@ -280,27 +280,24 @@ public class MainActivity extends Activity {
     }
 
     private String audioModeName(int mode) {
-        switch (mode) {
-            case AudioManager.MODE_NORMAL:
-                return "NORMAL";
+switch (mode) {
+case AudioManager.MODE_NORMAL:
+return "NORMAL";
 
-            case AudioManager.MODE_RINGTONE:
-                return "RINGTONE";
+    case AudioManager.MODE_RINGTONE:
+        return "RINGTONE";
 
-            case AudioManager.MODE_IN_CALL:
-                return "IN_CALL";
+    case AudioManager.MODE_IN_CALL:
+        return "IN_CALL";
 
-            case AudioManager.MODE_IN_COMMUNICATION:
-                return "IN_COMMUNICATION";
+    case AudioManager.MODE_IN_COMMUNICATION:
+        return "IN_COMMUNICATION";
 
-            case 3:
-                return "CALL_SCREENING";
+    default:
+        return "UNKNOWN (" + mode + ")";
+}
 
-            default:
-                return "UNKNOWN";
-        }
-    }
-
+}
     private String deviceTypeName(int type) {
         switch (type) {
             case AudioDeviceInfo.TYPE_BUILTIN_EARPIECE:
